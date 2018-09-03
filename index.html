@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <title>unit-4-game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="game.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
 </head>
 
 <body>
@@ -39,23 +41,21 @@
             39
         </div>
         <div class="cyan-box">
-            Wins: 0
-            <br> Loses: 0
+           <p>Wins:</p> <div class="nwins">  0 </div>
+          <p>Losses:</p>  <div class="nlosses">  0 </div>
         </div>
         <div>
             <section>
-                <div class="box-1">
+                <div class="red">
                     <img src="data:image/png;base64,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"
-                        style="width:200px; height: 200px;"> </div>
-                <div class="box-2">
+                        style="width:150px; height: 150px;"> </div>
+                <div class="blue">
                     <img src="data:image/png;base64,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"
-                        style="width:200px; height: 200px;"> </div>
-                <div class="box-3">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVgHDwuwSLYC-WEfg6VBezRRHwgIjkpAzpaBgkLyitKZHwKuj"
-                        style="width:200px; height: 200px;"> </div>
-                <div class="box-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuSibR2zbfSdSxovkNPVKzUh4CXLChdhGD_hhSJIYCxMJ7nmOY"
-                        style="width:200px; height: 200px;"> </div>
+                        style="width:150px; height: 150px;"> </div>
+                <div class="yellow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVgHDwuwSLYC-WEfg6VBezRRHwgIjkpAzpaBgkLyitKZHwKuj" style="width:150px; height: 150px;"> </div>
+                <div class="green">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuSibR2zbfSdSxovkNPVKzUh4CXLChdhGD_hhSJIYCxMJ7nmOY" style="width:150px; height: 150px;"> </div>
             </section>
 
 
@@ -121,8 +121,7 @@
     }
 
 
-    .box-1 {
-        background: white;
+    .red {
         clear: both;
         float: left;
         margin-top: 10px;
@@ -131,26 +130,23 @@
     }
 
 
-    .box-2 {
+    .blue {
         float: left;
-        background: red;
         margin-top: 10px;
         margin-right: 5px;
     }
 
 
-    .box-3 {
+    .yellow {
         float: left;
-        background: purple;
         margin-top: 10px;
         margin-right: 5px;
     }
 
 
 
-    .box-4 {
+    .green {
         float: left;
-        background: blue;
         margin-top: 10px;
         margin-right: 5px;
     }
@@ -175,6 +171,104 @@
         font-size: 40px;
         margin-bottom: 5px;
     }
+
+    .nwins {
+        text-align: right;
+    }
 </style>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        var randomNmbr = Math.floor(Math.random() * 120 + 19)
+
+        $(".grn-box").text(randomNmbr);
+
+        var redGem = Math.floor(Math.random() * 12 + 1)
+        var blueGem = Math.floor(Math.random() * 12 + 1)
+        var yellowGem = Math.floor(Math.random() * 12 + 1)
+        var greenGem = Math.floor(Math.random() * 12 + 1)
+
+
+        var total = 0;
+        var wins = 0;
+        var losses = 0;
+
+
+        function reset() {
+            Random = Math.floor(Math.random() * 120 + 19);
+            $(".grn-box").text(randomNmbr);
+            redGem = Math.floor(Math.random() * 12 + 1);
+            blueGem = Math.floor(Math.random() * 12 + 1);
+            yellowGem = Math.floor(Math.random() * 12 + 1);
+            greenGem = Math.floor(Math.random() * 12 + 1);
+            total = 0;
+            $(".zero").text(total);
+        }
+
+
+
+        function win() {
+            wins++;
+            $(".nwins").text(wins);
+            reset();
+        }
+
+        function lose() {
+            losses++;
+            $('.nlosses').text(losses);
+            reset();
+        }
+
+        $(".red").on('click', function () {
+            total = total + redGem;
+            $(".zero").text(total);
+            if (total == randomNmbr) {
+                win();
+            }
+
+            else if (total > randomNmbr) {
+                lose();
+            }
+        })
+
+        $(".blue").on('click', function () {
+            total = total + blueGem;
+            $(".zero").text(total);
+            if (total == randomNmbr) {
+                win();
+            }
+
+            else if (total > randomNmbr) {
+                lose();
+            }
+        })
+        $(".yellow").on('click', function () {
+            total = total + yellowGem;
+            $(".zero").text(total);
+            if (total == randomNmbr) {
+                win();
+            }
+
+            else if (total > randomNmbr) {
+                lose();
+            }
+
+        })
+        $(".green").on('click', function () {
+            total = total + greenGem;
+            $(".zero").text(total);
+            if (total == randomNmbr) {
+                win();
+            }
+
+            else if (total > randomNmbr) {
+                lose();
+            }
+        })
+    });
+</script>
 
 </html>
