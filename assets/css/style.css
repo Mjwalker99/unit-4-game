@@ -1,0 +1,105 @@
+body {
+    background: lightskyblue;
+}
+
+
+
+header {
+    background-color: darkgoldenrod;
+    margin-right: 70%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;
+    color: white;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+.p {
+    background-color: tan;
+    margin-right: 40%;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: green;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+
+.grn-box {
+    background: green;
+    float: left;
+    margin-left: 10px;
+    padding-right: 20%;
+    padding-bottom: 70px;
+    font-size: 40px;
+
+}
+
+
+.cyan-box {
+    background: cyan;
+    float: left;
+    margin-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 52px;
+
+}
+
+
+.red {
+    clear: both;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+
+.blue {
+    float: left;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+
+.yellow {
+    float: left;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+
+
+.green {
+    float: left;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+
+
+.score {
+    clear: both;
+    background: teal;
+    color: white;
+    margin-left: 10px;
+    margin-right: 70%;
+}
+
+
+.zero {
+    background: teal;
+    color: white;
+    margin-left: 10px;
+    margin-right: 70%;
+    padding-bottom: 70px;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.nwins {
+    text-align: right;
+}
