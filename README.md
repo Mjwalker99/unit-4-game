@@ -17,3 +17,5 @@ You lose the game if your total score goes above the random number, and your Los
 The value of each crystal is invisible until you click it.
 
 Once you win or lose, the game will reset and a new random number will be generated.
+
+https://mjwalker99.github.io/unit-4-game/
